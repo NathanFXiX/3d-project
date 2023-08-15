@@ -14,6 +14,10 @@
     --azul-escuro: #166088;
 }
 
+span {
+    color: var(--azul-escuro);
+}
+
 .bold {
     font-weight: bold;
 }
@@ -73,6 +77,37 @@ header ul {
 
 main {
     min-height: 60vh;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.title-me {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.about p {
+    text-align: center;
+    padding-left: 30px;
+    max-width: 100ch;
+}
+
+.f-image {
+    width: 500px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+#imagem-principal {
+    background-image: url(https://fastly.picsum.photos/id/36/200/300.jpg?hmac=yeKKPp3h_shxmrZgoKPc6ix1TOSmkj8Rs9FZVpFzljA);
 }
 
 /* Footer */
