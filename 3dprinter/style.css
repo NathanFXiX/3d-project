@@ -1,77 +1,105 @@
-/* -- Reset -- */
+/* Root & Reset */
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --cinza-escuro: #4F6D7A;
+    --cinza-medio: #C0D6DF;
+    --cinza-claro: #DBE9EE;
+    --azul-claro: #4A6FA5;
+    --azul-escuro: #166088;
 }
 
-/* -- Reset -- */
+.bold {
+    font-weight: bold;
+}
 
-/* -- Header configs -- */
+/* Cabeçalho */
+
 header {
     display: flex;
-    background-color: #daa520;
-    padding: 15px;
+    flex-direction: row;
+    padding: 10px;
+    background-color: var(--cinza-medio);
+    border-bottom: 1px solid var(--azul-escuro);
 }
 
-/* -- Header configs -- */
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-left: 10px;
+    color: var(--cinza-escuro);
+}
 
+header h1:hover {
+    color: var(--azul-claro);
+    border-bottom: 4px solid var(--azul-escuro);
+    transition: .2s;
+}
 
-/* -- Logo configs -- */
 header a {
+    font-size: 1em;
+    font-weight: 500;
     text-decoration: none;
+    color: var(--azul-claro);
+    transition: .2s linear;
 }
 
-#username {
-    margin: left;
-    font-weight: bold;
-    font-size: 2em;
-    color: black;
-    text-align: center;
-    letter-spacing: 10px;
+header a:hover {
+    font-size: 1.1em;
+    color: var(--cinza-escuro);
 }
 
-#username:hover {
-    color: chocolate;
-    text-shadow: 
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
-    transition: .08s linear;
-}
-
-/* -- Logo configs -- */
-
-/* -- Text directions in header -- */
-
-.directions {
+.h-links {
+    display: flex;
+    justify-content: right;
+    margin: auto;
     width: 100%;
 }
 
-.directions ul {
-    display: flex;
-    flex-direction: row;
+header ul {
+    padding-right: 30px;
+    columns: 3;
+    column-gap: 20px;
     list-style: none;
-    justify-content: right;
+    text-align: center;
 }
 
-.directions p {
-    padding-left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
+/* Conteúdo principal */
+
+main {
+    min-height: 60vh;
 }
 
-.directions p:hover {
-    color: chocolate;
-    text-shadow: 
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
-    transition: .08s linear;
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--cinza-medio);
+    padding: 60px;
 }
 
+hr {
+    padding: .4px;
+    background-color: var(--azul-escuro);
+}
+
+footer p {
+    color: var(--cinza-escuro);
+    padding: 20px;
+}
+
+footer a {
+    color: var(--azul-claro);
+    text-decoration: none;
+    transition: .4s;
+}
+
+footer a:hover {
+    font-size: 1.1em;
+    color: var(--cinza-escuro);
+    border-bottom: 2px solid var(--azul-escuro);
+}
